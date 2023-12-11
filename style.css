@@ -662,6 +662,9 @@ audio::-webkit-media-controls-panel {
     .footer_lower_section {
         padding: 1rem;
     }
+    .sign_in_page{
+        font-size: 0.6rem;
+    }
 }
 
 @media only screen and (max-width:1200px) {
