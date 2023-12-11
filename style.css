@@ -293,12 +293,15 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.7rem;
 }
 .strengths{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
+    
 }
+
 .p_st{
     width: 30px;
     height: 5px;
@@ -520,6 +523,7 @@ audio::-webkit-media-controls-panel {
     border: 1px solid #EBEDF0;
     border-radius: 0.5rem;
     background-color: #EBEDF0;
+    justify-content: space-between
 }
 
 /* add new page------------------------- */
@@ -665,6 +669,10 @@ audio::-webkit-media-controls-panel {
     .sign_in_page{
         font-size: 0.6rem;
     }
+    .footer_upper_section{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding-bottom: 1rem;
+    }
 }
 
 @media only screen and (max-width:1200px) {
@@ -745,6 +753,10 @@ audio::-webkit-media-controls-panel {
     }
     .title{
         font-size: 1rem;
+    }
+    .footer_upper_section{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding-bottom: 1rem;
     }
 }
 
