@@ -758,6 +758,9 @@ audio::-webkit-media-controls-panel {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         padding-bottom: 1rem;
     }
+    .small_nav_a{
+        width: 78%;
+    }
 }
 
 
