@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar------ -->
+
+    <div class="nav_container">
+        <div class="icon_resp">
+            <img src="./Images/HobbyCueLogovResponsive.svg" alt="">
+        </div>
+        <a href="./index.html"><div class="icon"><img src="./Images/HobbyCueLogo.svg" alt="logo"></div></a>
+        <div class="search_bar">
+            <input class="search_input" type="text" name="search_bar" placeholder="Search here......">
+            <img class="search_icon" src="./Images/search.svg" alt="Search">
+        </div>
+        <div class="features">
+            <div class="dropdown">
+                <div class="dropbtn">
+                    <img class="feature_icon" src="./Images/Explore.svg" alt="Explore">
+                    <button class="dropbtn">Explore </button>
+                    <img src="./Images/drop_down.svg" alt="">
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">People-Community</a>
+                    <a href="#">Places-Venue</a>
+                    <a href="#">Programs-Event</a>
+                    <a href="#">Products-store</a>
+                    <a href="#">Blogs</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropbtn">
+                    <img class="feature_icon" src="./Images/Hobbies.svg " alt="Explore">
+                    <button class="dropbtn">Hobbies</button>
+                    <img src="./Images/drop_down.svg" alt="">
+                </div>
+                <div class="dropdown-content">
+                    <a href="#">People</a>
+                    <a href="#">Places</a>
+                    <a href="#">Programs</a>
+                    <a href="#">Product</a>
+                    <a href="#">Blogs</a>
+                </div>
+            </div>
+
+            <img class="feature_icon" src="./Images/bookmark.svg" alt="bookmark">
+            <img class="feature_icon" src="./Images/bell.svg" alt="bell">
+            <img class="feature_icon" src="./Images/cart.svg" alt="add_to_cart">
+
+            <button class="btn">Sign In</button>
+
+        </div>
+        <div class="burger hide">
+            <img class="feature_icon" src="./Images/search1.svg" alt="bell">
+            <img class="feature_icon" src="./Images/bell.svg" alt="bell">
+            <img src="./Images/menu_black.svg" alt="" class="burger_icon" onclick="ShowPopUp()">
+        </div>
+    </div>
+<!-- ---add-new-page------------------ -->
+
+    <div class="add_new_container">
+        <div class="add_new">
+            <div class="add_new_title">
+                <img src="./Images/Add.svg" alt="add_new">
+                <p>Add Your Listing</p>
+            </div>
+            <div class="add_new_cards">
+                <div class="add_new_card_1 card">
+                    <div class="card_head card_head_hover ">
+                        <img src="./Images/people.svg" alt="">
+                        <div class="title font_black">People</div>
+                    </div>
+                    <div class="sm_text">An Individual or Organization. Teacher, Coach, Professional or Online Seller.
+                        Company, Business or Association.</div>
+                </div>
+
+                <div class="add_new_card_2 card">
+                    <div class="card_head ">
+                        <div class="font_icon"><i class="fa-solid fa-location-dot "></i></div>
+                        
+                        <div class="title font_black">Place</div>
+                    </div>
+                    <div class="sm_text">An Address.  Classroom, Shop, Performance or Event Venue, Sports Arena, Play Area, Studio, School or Campus.</div>
+                </div>
+
+                <div class="add_new_card_3 card">
+                    <div class="card_head ">
+                        <img src="./Images/product.svg" alt="">
+                        <div class="title font_black">Product</div>
+                    </div>
+                    <div class="sm_text">An Item that you can Book, Buy or Rent.  Appointment, Ticket, or Voucher.  Equipment, Instrument or Activity Kit.</div>
+                </div>
+
+                <div class="add_new_card_4 card">
+                    <div class="card_head ">
+                        <img src="./Images/program.svg" alt="">
+                        <div class="title font_black">Program</div>
+                    </div>
+                    <div class="sm_text">An Event with Venue and Date.  Meetup, Workshop or Webinar.  Exhibition, Performance or Competition.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- popup of login or join in mobile version ---------------->
+
+     <div class="popup_container hidden_section">
+        <div class="popup_section ">
+            <div class="small_nav">
+                <img src="./Images/HobbyCueLogovResponsive.svg" alt="">
+                <div class="cross_bar" onclick="ShowPopUp()">X</div>
+
+            </div>
+            <div class="login_section">
+
+                <div class="title font_purple" style="display: flex; gap: 1rem;">
+                    <div class="sign_in add_underline" onclick="SignIn()">Sign In </div>
+
+                    <div class="join_in" onclick="JoinIn()">Join in</div>
+                </div>
+                <div class="other_login_option">
+                    <img class="img_position" src="./Images/Google.svg" alt="">
+                    <p>Continue with Google</p>
+
+                </div>
+                <div class="other_login_option">
+                    <img class="img_position" src="./Images/Facebook.svg" alt="">
+                    <p>Continue with Facebook</p>
+                </div>
+                <div class="flex_justify_center ">
+                    <div>Or connect with</div>
+                </div>
+                <div class="input_field flex_justify_between " style="background-color: 
+            #EBEDF0;">
+                    <input type="email" name="email" id="" placeholder="Email">
+                </div>
+                <div class="input_field flex_justify_between" style="background-color: 
+            #EBEDF0;">
+                    <input type="password" name="password" id="" placeholder="Password">
+                    <img src="./Images//eye.svg" alt="">
+                </div>
+
+                <div class="toggle_section sign_in_page">
+                    <div class="flex_justify_between ">
+                        <label class="remember_checkbox">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                        <div>
+                            <img src="./Images/lock_black.svg" alt="">
+                            Forgot Password?
+                        </div>
+                    </div>
+                    <button class="btn max_btn">Continue</button>
+                </div>
+                <div class="toggle_section hidden_section join_in_page">
+                    <div class="password_strength">
+                        <div class="strengths">
+                            <div class="p_st"></div>
+                            <div class="p_st"></div>
+                            <div class="p_st"></div>
+                        </div>
+                        <p>Password strength</p>
+                    </div>
+                    <p>By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+                    <button class="btn max_btn">agree and continue</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

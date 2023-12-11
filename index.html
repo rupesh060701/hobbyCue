@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HobbyCue</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="full_container" >
+        <!-- scroll to top button---- -->
+
+        <div class="scroll_top">
+            <a href="#nav"><i class="fa-solid fa-angle-up"></i></a>
+        </div>
+
+        <!-- Navbar--------------- -->
+
+        <div class="nav_container" id="nav">
+            <div class="icon_resp">
+                <img src="./Images/HobbyCueLogovResponsive.svg" alt="">
+            </div>
+
+            <div class="icon"><img src="./Images/HobbyCueLogo.svg" alt="logo"></div>
+            <div class="search_bar">
+                <input class="search_input" type="text" name="search_bar" placeholder="Search here......">
+                <img class="search_icon" src="./Images/search.svg" alt="Search">
+            </div>
+            <div class="features">
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <img class="feature_icon" src="./Images/Explore.svg" alt="Explore">
+                        <button class="dropbtn">Explore </button>
+                        <img src="./Images/drop_down.svg" alt="">
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#">People-Community</a>
+                        <a href="#">Places-Venue</a>
+                        <a href="#">Programs-Event</a>
+                        <a href="#">Products-store</a>
+                        <a href="#">Blogs</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="dropbtn">
+                        <img class="feature_icon" src="./Images/Hobbies.svg " alt="Explore">
+                        <button class="dropbtn">Hobbies</button>
+                        <img src="./Images/drop_down.svg" alt="">
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#">People</a>
+                        <a href="#">Places</a>
+                        <a href="#">Programs</a>
+                        <a href="#">Products</a>
+                        <a href="#">Blogs</a>
+                    </div>
+                </div>
+
+                <img class="feature_icon" src="./Images/bookmark.svg" alt="bookmark">
+                <img class="feature_icon" src="./Images/bell.svg" alt="bell">
+                <img class="feature_icon" src="./Images/cart.svg" alt="add_to_cart">
+
+                <button class="btn fit_txt_res">Sign In</button>
+
+            </div>
+            <div class="burger hide">
+                <img class="feature_icon" src="./Images/search1.svg" alt="bell">
+                <img class="feature_icon" src="./Images/bell.svg" alt="bell">
+                <img src="./Images/menu_black.svg" alt="menu-bar" class="burger_icon" onclick="ShowPopUp()">
+            </div>
+        </div>
+
+
+        <!-- hero section----------------- -->
+
+        <div class="hero_container" id="hero_section">
+            <div class="main_desccription">
+                <div class="main_heading">
+                    <p>Explore Your <span style="color: #0096C8;">hobby</span> and <span
+                            style="color: #8064A2;">passion</span></p>
+                </div>
+                <div class="detail sm_text">
+                    <p>
+                        Sign-in to interact with a community of fellow hobbyists and an eco-system of experts, teachers,
+                        suppliers, classes, workshops, and places to practice, participate or perform. <span
+                            class="hidden_para">Your hobby may be
+                            about visual or performing arts, sports, games, gardening, model making, cooking, indoor or
+                            outdoor activities…
+                            <br><br>
+                            If you are an expert or a seller, you can Add your Listing and promote yourself, your
+                            students,
+                            products, services or events. Hop on your hobbyhorse and enjoy the ride.</span>
+                    </p>
+                </div>
+                <div class="main_img">
+                    <img src="./Images/Group 27.svg" alt="">
+                </div>
+
+            </div>
+
+            <div class="login_section" id="heropage_login">
+
+                <div class="title font_purple" style="display: flex; gap: 1rem;">
+                    <div class="sign_in add_underline" onclick="SignIn()">Sign In </div>
+
+                    <div class="join_in" onclick="JoinIn()">Join in</div>
+                </div>
+                <div class="other_login_option">
+                    <img class="img_position" src="./Images/Google.svg" alt="">
+                    <p>Continue with Google</p>
+
+                </div>
+                <div class="other_login_option">
+                    <img class="img_position" src="./Images/Facebook.svg" alt="">
+                    <p>Continue with Facebook</p>
+                </div>
+                <div class="flex_justify_center ">
+                    <div>Or connect with</div>
+                </div>
+                <div class="input_field flex_justify_between ">
+                    <input type="email" name="email" id="" placeholder="Email">
+                </div>
+                <div class="input_field flex_justify_between">
+                    <input type="password" name="password" id="" placeholder="Password">
+                    <img src="./Images//eye.svg" alt="">
+                </div>
+
+                <div class="toggle_section sign_in_page">
+                    <div class="flex_justify_between ">
+                        <label class="remember_checkbox">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                        <div>
+                            <img src="./Images/lock_black.svg" alt="">
+                            Forgot Password?
+                        </div>
+                    </div>
+                    <button class="btn max_btn">Continue</button>
+                </div>
+                <div class="toggle_section hidden_section join_in_page">
+                    <div class="password_strength">
+                        <div class="strengths">
+                            <div class="p_st"></div>
+                            <div class="p_st"></div>
+                            <div class="p_st"></div>
+                        </div>
+                        <p>Password strength</p>
+                    </div>
+                    <p>By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+                    <button class="btn max_btn">agree and continue</button>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <!-- popup of login or join in mobile version ---------------->
+
+        <div class="popup_container hidden_section">
+            <div class="popup_section ">
+                <div class="small_nav">
+                    <img src="./Images/HobbyCueLogovResponsive.svg" alt="">
+                    <div class="cross_bar" onclick="ShowPopUp()">X</div>
+
+                </div>
+                <div class="login_section">
+
+                    <div class="title font_purple" style="display: flex; gap: 1rem;">
+                        <div class="sign_in add_underline" onclick="SignIn()">Sign In </div>
+
+                        <div class="join_in" onclick="JoinIn()">Join in</div>
+                    </div>
+                    <div class="other_login_option">
+                        <img class="img_position" src="./Images/Google.svg" alt="">
+                        <p>Continue with Google</p>
+
+                    </div>
+                    <div class="other_login_option">
+                        <img class="img_position" src="./Images/Facebook.svg" alt="">
+                        <p>Continue with Facebook</p>
+                    </div>
+                    <div class="flex_justify_center ">
+                        <div>Or connect with</div>
+                    </div>
+                    <div class="input_field flex_justify_between " style="background-color: 
+                #EBEDF0;">
+                        <input type="email" name="email" id="" placeholder="Email">
+                    </div>
+                    <div class="input_field flex_justify_between" style="background-color: 
+                #EBEDF0;">
+                        <input type="password" name="password" id="" placeholder="Password">
+                        <img src="./Images//eye.svg" alt="">
+                    </div>
+
+                    <div class="toggle_section sign_in_page">
+                        <div class="flex_justify_between ">
+                            <label class="remember_checkbox">
+                                <input type="checkbox">
+                                Remember me
+                            </label>
+                            <div>
+                                <img src="./Images/lock_black.svg" alt="">
+                                Forgot Password?
+                            </div>
+                        </div>
+                        <button class="btn max_btn">Continue</button>
+                    </div>
+                    <div class="toggle_section hidden_section join_in_page">
+                        <div class="password_strength">
+                            <div class="strengths">
+                                <div class="p_st"></div>
+                                <div class="p_st"></div>
+                                <div class="p_st"></div>
+                            </div>
+                            <p>Password strength</p>
+                        </div>
+                        <p>By continuing, you agree to our Terms of Service and Privacy Policy.</p>
+                        <button class="btn max_btn">agree and continue</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- section1--------------------- -->
+        <div class="section1_container">
+
+            <div class="card ">
+                <div class="card_head ">
+                    <img src="./Images/people.svg" alt="">
+                    <div class="title font_black">People</div>
+                </div>
+                <div class="sm_text">Find a teacher, coach, or expert for your hobby interest in your locality. Find a
+                    partner, teammate, accompanist or collaborator.</div>
+                <div class="btn ">Connect</div>
+            </div>
+
+            <div class="card ">
+                <div class="card_head ">
+                    <img src="./Images/location.svg" alt="">
+                    <div class="title font_black">Place</div>
+                </div>
+                <div class="sm_text">Find a class, school, playground, auditorium, studio, shop or an event venue. Book
+                    a slot at venues that allow booking through hobbycue..</div>
+                <div class="btn ">Meet up</div>
+            </div>
+
+            <div class="card ">
+                <div class="card_head">
+                    <img src="./Images/product.svg" alt="">
+                    <div class="title font_black">Product</div>
+                </div>
+                <div class="sm_text">Find equipment or supplies required for your hobby. Buy, rent or borrow from shops,
+                    online stores or from community members.</div>
+                <div class="btn ">Get it</div>
+            </div>
+
+            <div class="card ">
+                <div class="card_head">
+                    <img src="./Images/program.svg" alt="">
+                    <div class="title font_black">Program</div>
+                </div>
+                <div class="sm_text">Find events, meetups and workshops related to your hobby. Register or buy tickets
+                    online.</div>
+                <div class="btn ">Attend</div>
+            </div>
+
+
+
+        </div>
+        <!-- section2-add-your-own--------------------- -->
+        <div class="section1_container full_container ">
+            <div class="section2_container">
+                <div class="add_your_own_card card">
+                    <div class="card_head">
+                        <img src="./Images/Add.svg" alt="">
+                        <div class="title font_black">Add your own </div>
+                    </div>
+                    <div class="sm_text">Are you a teacher or expert? Do you sell or rent out equipment, venue or event
+                        tickets? Or, you know someone who should be on hobbycue? Go ahead and Add your Own page</div>
+                    <a href="./addNew.html">
+                        <div class="btn full_btn">Add new</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- section3-testimonial--------------------- -->
+        <div class="section3_container">
+            <div class=" card testimonial_card">
+                <div class="card_head">
+                    <img src="./Images/testimonial.svg" alt="">
+                    <div class="title font_black">Testimonials</div>
+                </div>
+                <div class="sm_text">In a fast growing and ever changing city like Bangalore, it sometimes becomes very
+                    difficult to find or connect with like minded people. Websites like hobbycue.com is a great service
+                    which helps me get in touch with, communicate, connect, and exchange ideas with other dancers. It
+                    also provides the extra benefit of finding products and services that I can avail, which I can be
+                    assured is going to be of great quality as it comes recommended by people of the hobbycue community.
+                    To have discussions, to get visibility, and to be able to safely explore various hobbies and
+                    activities in my city, all under one roof, is an excellent idea and I highly recommend it.</div>
+                <div class="testimonial_detail">
+                    <div class="audio_part">
+                        <audio controls>
+                            <source src="horse.ogg" type="audio/ogg">
+                            <source src="horse.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+
+                        <img src="./Images//dancer.png" alt="">
+                    </div>
+                    <div class="person_information">
+
+                        <img src="./Images//dancer.png" alt="">
+
+                        <div class="person_info">
+                            <div class="person_name">Shubha Nagarajan</div>
+                            <div class="designation">Classical Dancer</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- section4-community--------------------- -->
+
+        <div class="section4_container ">
+
+            <div class="main_heading community_card">
+                <p>Your <span style="color: #8064A2;">Hobby ,</span> Your <span
+                        style="color: #0096C8;">Community...</span></p>
+                <button class="fill_btn">Get Start</button>
+                <img src="./Images/community.svg" alt="">
+
+            </div>
+
+        </div>
+        <!-- section5-footer--------------------- -->
+
+        <div class="footer_container">
+            <div class="footer_upper_section">
+                <div class="Hobbycue sm_text">
+                    <p class="subtitle">Hobbycue</p>
+                    <p>About Us</p>
+                    <p>Our Services</p>
+                    <p>Work With Us</p>
+                    <p>FAQ</p>
+                    <p>Contact Us</p>
+                </div>
+                <div class="How_Do_I">
+                    <p class="subtitle">How Do I</p>
+                    <p>Sign Up</p>
+                    <p>add a Listing</p>
+                    <p>Claim Listing</p>
+                    <p>Past a Query</p>
+                    <p>Add a Blog Post</p>
+                    <p>Other queries</p>
+                </div>
+                <div class="Quick_Links">
+                    <p class="subtitle">Quick Links</p>
+                    <p>Listings</p>
+                    <p>Blog Posts</p>
+                    <p>Shop/Stores</p>
+                    <p>Community</p>
+                </div>
+                <div class="Social_Media">
+                    <p class="subtitle">Socila Media</p>
+                    <div class="social_media_icons">
+                        <img src="./Images//sm1.svg" alt="">
+                        <img src="./Images//sm2.svg" alt="">
+                        <img src="./Images//sm3.svg" alt="">
+                        <img src="./Images//sm4.svg" alt="">
+                        <img src="./Images//sm5.svg" alt="">
+                        <img src="./Images//sm6.svg" alt="">
+                    </div>
+                    <p class="subtitle">Invite Friends</p>
+                    <div class="search_bar">
+                        <input class="search_input" type="text" name="search_bar" placeholder="Email.">
+                        <p class="invite_btn">Invite</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer_lower_section">
+                <p>© Purple Cues Private Limited</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
